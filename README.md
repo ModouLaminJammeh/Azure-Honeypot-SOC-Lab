@@ -51,7 +51,7 @@ The alert indicates potential malicious behavior, such as repeated failed login 
 ---
 
 ### 🔹 2. Attack Map Visualization
-![Attack Map](images/attackmap.png)
+![Attack Map](attackmap.png)
 
 The attack map provides a geographical visualization of incoming connections to the honeypot.  
 It highlights multiple source locations attempting to access the exposed VM, demonstrating how publicly exposed systems attract global attack traffic.
@@ -59,7 +59,7 @@ It highlights multiple source locations attempting to access the exposed VM, dem
 ---
 
 ### 🔹 3. Detection Rules / Analytics
-![Detection](images/detection.png)
+![Detection](detection.png)
 
 This image shows analytics rules configured in Microsoft Sentinel.  
 These rules are responsible for detecting suspicious patterns (e.g., multiple failed SSH logins) and triggering alerts.  
@@ -68,7 +68,7 @@ It reflects how detection logic is implemented in a SIEM environment.
 ---
 
 ### 🔹 4. Incident View
-![Incident](images/incidents.png)
+![Incident](incidents.png)
 
 This screenshot displays incidents generated from correlated alerts.  
 Incidents group related alerts into a single case, making it easier to investigate and understand the full attack story.  
@@ -77,7 +77,7 @@ This is a key part of SOC workflows and incident management.
 ---
 
 ### 🔹 5. Log Analysis (KQL)
-![Logs](images/logs.png)
+![Logs](logs.png)
 
 This image shows raw log data queried using Kusto Query Language (KQL).  
 Here, I analyzed authentication logs to identify patterns such as repeated login failures, attacker IP addresses, and timestamps.  
@@ -86,33 +86,11 @@ This step is critical for deep investigation and validation of alerts.
 ---
 
 ### 🔹 6. Lab Architecture Overview
-![Lab Overview](images/overview.png)
+![Lab Overview](overview.png)
 
 This diagram represents the overall architecture of the honeypot lab.  
 It includes the Azure virtual machine, networking configuration, Log Analytics Workspace, and Microsoft Sentinel.  
 This provides a high-level understanding of how data flows from the target system into the SIEM for monitoring and analysis.
-
-## 📸 Project Steps & Screenshots
-
-Documenting the workflow and observations:
-
-- **Ref 1: Azure VM Deployment**  
-  Creation and configuration of the Ubuntu honeypot VM  
-
-- **Ref 2: Network Configuration**  
-  Opening ports (e.g., SSH) to allow inbound attack traffic  
-
-- **Ref 3: Log Analytics Setup**  
-  Connecting the VM to Log Analytics Workspace  
-
-- **Ref 4: Microsoft Sentinel Dashboard**  
-  Viewing ingested logs and monitoring activity  
-
-- **Ref 5: Attack Detection (Brute Force)**  
-  Observing failed login attempts and suspicious IP activity  
-
-- **Ref 6: KQL Log Analysis**  
-  Querying logs to investigate attacker patterns  
 
 ---
 
